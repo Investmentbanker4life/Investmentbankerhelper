@@ -12,10 +12,10 @@ ATLAS-7 is one HTML file (`index.html`) with no backend and no build step. Open 
 
 Click **Connection** in the top bar and choose:
 
-- **Anthropic (Claude)** — e.g. `claude-sonnet-4-6`
-- **OpenAI (GPT)** — e.g. `gpt-4o`
-- **Groq** — e.g. `llama-3.3-70b-versatile`
-- **Custom (OpenAI-compatible)** — point it at any endpoint that speaks the OpenAI chat-completions format (self-hosted models, OpenRouter, LM Studio, etc.)
+- **Anthropic (Claude)** — pick from a dropdown: Sonnet 4.6 (recommended), Opus 4.6 (highest quality), or Haiku 4.5 (fastest/cheapest)
+- **OpenAI (GPT)** — dropdown: GPT-4o (recommended), GPT-4o mini, or GPT-4.1
+- **Groq** — dropdown: GPT-OSS 120B (recommended), GPT-OSS 20B, or Qwen 3.6 27B
+- **Custom (OpenAI-compatible)** — point it at any endpoint that speaks the OpenAI chat-completions format (self-hosted models, OpenRouter, LM Studio, etc.); model name is free text since there's no fixed list
 - **Run Locally — no key** — runs a real model entirely inside your browser via [WebGPU](https://developer.chrome.com/blog/webgpu-release) ([WebLLM](https://github.com/mlc-ai/web-llm)). No key, no server, nothing leaves your machine. First connect downloads the model (hundreds of MB to a few GB) and caches it in the browser; needs a recent Chrome or Edge. Answers are noticeably less sharp than the hosted providers above since local models are much smaller — good for glossary/definition-style questions, weaker on nuanced modeling judgment calls.
 
 By default your key is stored only in your browser's `localStorage` and is sent directly from your browser to the provider you pick — this repo has no server component and never sees your key.
@@ -57,7 +57,3 @@ No npm install, no server, no build pipeline.
 ## Important
 
 ATLAS-7 is a drafting and reasoning aid. It does not have live market data, is not a licensed financial or legal advisor, and every figure, model, and recommendation it produces should be independently verified and reviewed by a qualified professional before any client, committee, or regulatory use.
-
-## License
-
-MIT — do whatever you like with it.
